@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Creative Team</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="images/IKONA.png" type="image/icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<div class="overflow-auto">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarResponsive">
+  <div class="container-fluid">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/IKONA.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
+      Creative Team
+    </a>
+  </div>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="mesime.html">Kthehu</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  body{
+    background-color: #C9C8FF;
+}
+
+.main-timeline {
+    position: relative
+}
+
+.main-timeline:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #c6c6c6;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.main-timeline .timeline {
+    margin-bottom: 40px;
+    position: relative
+}
+
+.main-timeline .timeline:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.main-timeline .icon {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.main-timeline .icon:before,
+.main-timeline .icon:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .icon:before {
+    background: #fff;
+    border: 2px solid #232323;
+    left: -3px
+}
+
+.main-timeline .icon:after {
+    border: 2px solid #c6c6c6;
+    left: 3px
+}
+
+.main-timeline .timeline:hover .icon:before {
+    left: 3px
+}
+
+.main-timeline .timeline:hover .icon:after {
+    left: -3px
+}
+
+.main-timeline .date-content {
+    width: 50%;
+    float: left;
+    margin-top: 22px;
+    position: relative
+}
+
+.main-timeline .date-content:before {
+    content: "";
+    width: 36.5%;
+    height: 2px;
+    background: #c6c6c6;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0
+}
+
+.main-timeline .date-outer {
+    width: 125px;
+    height: 125px;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    z-index: 1
+}
+
+.main-timeline .date-outer:before,
+.main-timeline .date-outer:after {
+    content: "";
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.33s ease-out 0s
+}
+
+.main-timeline .date-outer:before {
+    background: #fff;
+    border: 2px solid #232323;
+    left: -6px
+}
+
+.main-timeline .date-outer:after {
+    border: 2px solid #c6c6c6;
+    left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:before {
+    left: 6px
+}
+
+.main-timeline .timeline:hover .date-outer:after {
+    left: -6px
+}
+
+.main-timeline .date {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 27%;
+    left: 0
+}
+
+.main-timeline .month {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.main-timeline .year {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #232323;
+    line-height: 36px
+}
+
+.main-timeline .timeline-content {
+    width: 50%;
+    padding: 20px 0 20px 50px;
+    float: right
+}
+
+.main-timeline .title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 15px 0
+}
+
+.main-timeline .description {
+    margin-bottom: 0
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content {
+    float: right
+}
+
+.main-timeline .timeline:nth-child(2n) .date-content:before {
+    left: 10px
+}
+
+.main-timeline .timeline:nth-child(2n) .timeline-content {
+    padding: 20px 50px 20px 0;
+    text-align: right
+}
+
+@media only screen and (max-width: 991px) {
+    .main-timeline .date-content {
+        margin-top: 35px
+    }
+    .main-timeline .date-content:before {
+        width: 22.5%
+    }
+    .main-timeline .timeline-content {
+        padding: 10px 0 10px 30px
+    }
+    .main-timeline .title {
+        font-size: 17px
+    }
+    .main-timeline .timeline:nth-child(2n) .timeline-content {
+        padding: 10px 30px 10px 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .main-timeline:before {
+        margin: 0;
+        left: 7px
+    }
+    .main-timeline .timeline {
+        margin-bottom: 20px
+    }
+    .main-timeline .timeline:last-child {
+        margin-bottom: 0
+    }
+    .main-timeline .icon {
+        margin: auto 0
+    }
+    .main-timeline .date-content {
+        width: 95%;
+        float: right;
+        margin-top: 0
+    }
+    .main-timeline .date-content:before {
+        display: none
+    }
+    .main-timeline .date-outer {
+        width: 110px;
+        height: 110px
+    }
+    .main-timeline .date-outer:before,
+    .main-timeline .date-outer:after {
+        width: 110px;
+        height: 110px
+    }
+    .main-timeline .date {
+        top: 30%
+    }
+    .main-timeline .year {
+        font-size: 24px
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(2n) .timeline-content {
+        width: 95%;
+        text-align: center;
+        padding: 10px 0
+    }
+    .main-timeline .title {
+        margin-bottom: 10px
+    }
+}
+
+</style>
+<div class="container">
+<div class="main-timeline">
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">Hapi i pare </span>
+                                    <span class="year">Plani</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="title">Ku ndodhemi në momentin e tashem?</h5>
+                                <p class="description">
+                                   Këtu kemi të bëjmë me analizën e gjendjes së pikërishme të biznesit, situatën financiare, tregun, teknologjinë, personelin kur është fjala për biznesin ekzistues dhe përshkrimin e potencialeve, aftësive dhe mundësive të ndërmarrësve kur fillohet biznesi i ri. Kjo përfundon me analizën SWOT e cila paraqet një analizë të pozicionit konkurrues të biznesit;
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">Hapi i dyte</span>
+                                    <span class="year">Qëllimet</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="title">Ku dëshirojmë të arrijme?</h5>
+                                <p class="description">
+                                    I përkufizojmë qëllimet që duhet t’i arrijmë.Ato duhet të jenë të qarta aq sa mund të shprehen edhe në aspektin cilësor edhe në aspektin sasior, kështu që mund të vlerësohet suksesi në arritjen e tyre.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">Hapi i tretë</span>
+                                    <span class="year">Kushtet</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="title">Si do të arrijme atje?</h5>
+                                <p class="description">
+                                   Këtu kemi të bëjmë me shpjegimin e kushteve të tregut dhe të kushteve të teknologjisë, të cilat do të bëjnë të mundur që të arrihen objektivat. Si do t’i shesim dhe si do t’i sajojmë produktet apo shërbimet që bëjnë të mundur arritjen e objektivave.
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="icon"></div>
+                            <div class="date-content">
+                                <div class="date-outer">
+                                    <span class="date">
+                                            <span class="month">Hapi i katërt</span>
+                                    <span class="year">Sakrifica</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5 class="title">Sa jane të vlefshme sakrificat në krahasim me investimet që kemi bërë?</h5>
+                                <p class="description">
+                                  Do të bëhet një krahasim midis investimeve dhe efekteve nga investimet, përkatësisht rreth asaj se sa është i kënaqshem fitimin në krahasim me investimet që kemi bërë.Duke përmbledhur rëndësinë e planit të biznesit si një instrument për themelimin dhe menaxhimin e biznesit mund të thuhet se ai paraqet një platformë dhe burim të informatave për ta krahasuar gjendjen aktuale me qëllim, për të vlerësuar se sa janë arritur qëllimet dhe gjithashtu për të vlerësuar se cilat janë mundësitë. Gjithashtu plani i biznesit siguron që të krijohet një motivim më i madh i punonjësve për t’u identifikuar me BVM, mund të jetë një instrument për të tërhequr më tepër personel të kualifikuar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+</div>
+
+<!--Seksioni i Footerit-->
+
+<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3><a href="mesime.html">Mesime</a></h3>
+                        <ul>
+                            <li><a href="planifikimi.html">Planifikimi i Biznesit</a></li>
+                            <li><a href="strategjiadhekostot.html">Strategjia dhe kostot</a></li>
+                            <li><a href="menaxhimindermarrjes.html">Menaxhimi</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3><a href="startup.html">Biznes Plani</a></h3>
+                        <ul>
+                            <li><a href="hartimiplanit.html">Hartimi i planit</a></li>
+                            <li><a href="hapatefillimitbiznesit.html">Hapat e fillimit të biznesit</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <a href="index.html"><h3>Creative Team</h3></a>
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                <p class="copyright">Proudly created by Omnia © 2022 </p>
+            </div>
+        </footer>
+    </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</html>
